@@ -1,39 +1,6 @@
 import './index.css';
-
-export function foo() {
-  console.log('FOO');
-  new Person('abc').greet();
-  return 'hello world';
-}
-
-function loggedMethod<This, Args extends any[], Return>(
-  target: (this: This, ...args: Args) => Return,
-  context: ClassMethodDecoratorContext<
-    This,
-    (this: This, ...args: Args) => Return
-  >,
-) {
-  const methodName = String(context.name);
-
-  function replacementMethod(this: This, ...args: Args): Return {
-    console.log(`LOG: Entering method '${methodName}'.`);
-    const result = target.call(this, ...args);
-    console.log(`LOG: Exiting method '${methodName}'.`);
-    return result;
-  }
-
-  return replacementMethod;
-}
-
-class Person {
-  name: string;
-  constructor(name: string) {
-    this.name = name;
-  }
-
-  @loggedMethod
-  greet() {
-    console.log(`Hello, my name is ${this.name}.`);
-  }
-}
+export { foo } from './foo';
 export * from './component';
+export function createWorker() {
+  new Worker(new URL('./worker.ts', import.meta.url));
+}

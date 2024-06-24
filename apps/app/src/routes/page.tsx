@@ -1,6 +1,6 @@
 import { Helmet } from '@modern-js/runtime/head';
 import './index.css';
-import { Test, foo } from 'dep';
+import { Test, createWorker, foo } from 'dep';
 
 const Index = () => (
   <div className="container-box">
@@ -28,6 +28,20 @@ const Index = () => (
         }}
       >
         FOO
+      </button>
+      <button
+        onClick={() => {
+          const worker = new Worker(new URL('./worker.ts', import.meta.url));
+        }}
+      >
+        Create worker from app
+      </button>
+      <button
+        onClick={() => {
+          createWorker();
+        }}
+      >
+        Create worker from dep
       </button>
       <p className="description">
         Get started by editing <code className="code">src/routes/page.tsx</code>

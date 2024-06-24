@@ -1,5 +1,5 @@
 {
-  "name": "dep",
+  "name": "dep2",
   "version": "0.1.0",
   "type": "module",
   "exports": {
@@ -44,8 +44,5 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
-  },
-  "dependencies": {
-    "dep2": "workspace:^"
   }
 }
