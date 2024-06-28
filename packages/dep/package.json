@@ -3,14 +3,16 @@
   "version": "0.1.0",
   "type": "module",
   "exports": {
-    "source": "./src/index.ts",
-    "types": [
-      "./dist/index.d.ts",
-      "./src/index.ts"
-    ],
-    "import": "./dist/index.js",
-    "require": "./dist/index.cjs",
-    "default": "./dist/index.js"
+    ".": {
+      "source": "./src/index.ts",
+      "types": [
+        "./dist/index.d.ts",
+        "./src/index.ts"
+      ],
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
+    }
   },
   "scripts": {
     "dev": "modern dev",
