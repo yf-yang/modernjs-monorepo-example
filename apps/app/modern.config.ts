@@ -2,6 +2,8 @@ import { appTools, defineConfig } from '@modern-js/app-tools';
 import { tailwindcssPlugin } from '@modern-js/plugin-tailwindcss';
 import turboConsole from 'unplugin-turbo-console/rspack';
 
+console.log(turboConsole);
+
 // https://modernjs.dev/en/configure/app/usage
 export default defineConfig<'rspack'>({
   runtime: {
@@ -22,7 +24,11 @@ export default defineConfig<'rspack'>({
       },
     },
     rspack: (config, { appendPlugins }) => {
-      appendPlugins(turboConsole.default());
+      appendPlugins(
+        turboConsole({
+          extendedPathFileNames: ['index'],
+        }),
+      );
     },
   },
   experiments: {
