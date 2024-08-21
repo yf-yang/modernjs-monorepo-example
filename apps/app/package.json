@@ -24,18 +24,18 @@
     "dist/"
   ],
   "dependencies": {
-    "@modern-js/runtime": "^2.54.2",
+    "@modern-js/runtime": "^2.58.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@modern-js/app-tools": "^2.54.2",
-    "@modern-js/tsconfig": "^2.54.2",
-    "@types/node": "~20.14.8",
-    "@types/react": "^18.3.3",
+    "@modern-js/app-tools": "^2.58.1",
+    "@modern-js/tsconfig": "^2.58.1",
+    "@types/node": "~22.4.2",
+    "@types/react": "^18.3.4",
     "@types/react-dom": "^18.3.0",
     "dep": "workspace:^",
-    "lint-staged": "^13.3.0",
-    "prettier": "^2.8.8"
+    "lint-staged": "^15.2.9",
+    "prettier": "^3.3.3"
   }
 }
