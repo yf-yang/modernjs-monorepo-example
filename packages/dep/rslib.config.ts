@@ -4,9 +4,7 @@ export default defineConfig({
   lib: [
     {
       format: 'esm',
-      dts: {
-        build: true,
-      },
+      dts: true,
       bundle: true,
     },
     {

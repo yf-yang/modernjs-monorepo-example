@@ -13,13 +13,13 @@
     "paths": {
       "@/*": ["./src/*"]
     },
-    "declarationDir": "./dist",
+    "declarationDir": "dist",
     "resolveJsonModule": true,
     "rootDir": "src",
     "skipLibCheck": true,
     "strict": true,
     "composite": true,
-    "module": "ESNext"
+    "module": "ESNext",
   },
   "exclude": ["**/node_modules"],
   "include": [

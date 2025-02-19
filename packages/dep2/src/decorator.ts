@@ -23,7 +23,7 @@ export class Person {
     this.name = name;
   }
 
-  @loggedMethod
+  // @loggedMethod
   greet() {
     console.log(`Hello, my name is ${this.name}.`);
   }
