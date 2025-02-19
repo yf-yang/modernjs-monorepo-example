@@ -6,7 +6,8 @@
   "root": true,
   "type": "module",
   "scripts": {
-    "dev": "pnpm --filter mf-remote dev run dev & pnpm --filter app run dev",
+    "dev": "pnpm --filter mf-remote dev & pnpm --filter app dev",
+    "build:deps": "pnpm --filter dep2 build && pnpm --filter dep exec rslib build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
